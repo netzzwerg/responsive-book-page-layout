@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         }
       },
       scss: {
-        files: ['*.scss','scss/*.scss'],
+        files: ['scss/*.scss'],
         tasks: ['compass'],
         options: {
           livereload: 35353
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
       build: {
         options: {
           relativeAssets: true,
-          sassDir: '.',
+          sassDir: 'scss',
           cssDir: '.',
           imagesDir: '.',
           environment: 'development',
