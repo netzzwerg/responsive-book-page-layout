@@ -692,22 +692,23 @@ body {
 }
 
 /* line 13, scss/main.scss */
-article {
+#container1, #container3 {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* line 17, scss/main.scss */
+#container3 {
   background-color: #FFFFFF;
   color: #666666;
 }
 
-/* line 18, scss/main.scss */
-#container3, #container2, #container1 {
-  background-color: #f6f6f6;
-}
-
 /* line 22, scss/main.scss */
-#container3 {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+#col3 {
+  color: #FFFFFF;
+  background-color: #000000;
 }
 
-/* line 26, scss/main.scss */
+/* line 27, scss/main.scss */
 .block {
   text-align: justify;
 }
