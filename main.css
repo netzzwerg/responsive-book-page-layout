@@ -576,9 +576,138 @@ table {
   border-spacing: 0;
 }
 
-/* line 6, main.scss */
+/* line 5, scss/_layout.scss */
+#container3 {
+  width: 1800px;
+  margin: 50px auto;
+  clear: left;
+  overflow: hidden;
+}
+
+/* line 12, scss/_layout.scss */
+#container2 {
+  clear: left;
+  float: left;
+  width: 100%;
+  position: relative;
+  right: 20%;
+}
+
+/* line 20, scss/_layout.scss */
+#container1 {
+  float: left;
+  width: 100%;
+  position: relative;
+  right: 40%;
+}
+
+/* line 27, scss/_layout.scss */
+#col1, #col2, #col3 {
+  float: left;
+  position: relative;
+  left: 60%;
+}
+
+/* line 33, scss/_layout.scss */
+#col1, #col2 {
+  width: 40%;
+}
+
+/* line 37, scss/_layout.scss */
+#col3 {
+  width: 20%;
+}
+
+/* line 41, scss/_layout.scss */
+.block {
+  padding: 0 50px;
+}
+
+@media only screen and (min-width: 20.063em) and (max-width: 60em) {
+  /* line 48, scss/_layout.scss */
+  #container1, #container2, #container3 {
+    width: 100%;
+    right: 0px;
+  }
+
+  /* line 52, scss/_layout.scss */
+  #col1, #col2, #col3 {
+    width: 100%;
+    left: 0px;
+  }
+}
+@media only screen and (min-width: 60.063em) and (max-width: 110em) {
+  /* line 59, scss/_layout.scss */
+  #container3 {
+    width: 90%;
+  }
+
+  /* line 62, scss/_layout.scss */
+  #container2 {
+    right: 0px;
+  }
+
+  /* line 65, scss/_layout.scss */
+  #container1 {
+    right: 50%;
+  }
+
+  /* line 68, scss/_layout.scss */
+  #col1, #col2 {
+    width: 50%;
+  }
+
+  /* line 71, scss/_layout.scss */
+  #col1, #col2, #col3 {
+    left: 50%;
+  }
+
+  /* line 74, scss/_layout.scss */
+  #col3 {
+    width: 100%;
+  }
+  /* line 76, scss/_layout.scss */
+  #col3 .block {
+    padding: 0px;
+    width: 50%;
+  }
+  /* line 79, scss/_layout.scss */
+  #col3 .block > * {
+    padding: 0 50px;
+  }
+  /* line 83, scss/_layout.scss */
+  #col3 .block:nth-child(odd) {
+    float: left;
+  }
+  /* line 86, scss/_layout.scss */
+  #col3 .block:nth-child(even) {
+    float: right;
+  }
+}
+/* line 8, main.scss */
 body {
   background-color: #f6f6f6;
   font-family: Helvetica, Arial;
   text-align: center;
+}
+
+/* line 14, main.scss */
+article {
+  background-color: #FFFFFF;
+  color: #666666;
+}
+
+/* line 19, main.scss */
+#container3, #container2, #container1 {
+  background-color: #f6f6f6;
+}
+
+/* line 23, main.scss */
+#container3 {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* line 27, main.scss */
+.block {
+  text-align: justify;
 }

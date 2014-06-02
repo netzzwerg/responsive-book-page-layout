@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         }
       },
       scss: {
-        files: ['*.scss'],
+        files: ['*.scss','scss/*.scss'],
         tasks: ['compass'],
         options: {
           livereload: 35353
