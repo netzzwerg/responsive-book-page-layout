@@ -3,5 +3,6 @@ bower_components/
 
 .sass-cache
 .grunt
+.idea
 
 main.css
