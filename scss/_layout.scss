@@ -2,91 +2,70 @@ $container-max-width: 1800px;
 $right-column-width: 20%;
 $content-padding: 0 50px;
 
-#container3 {
-  width: $container-max-width;
-  margin: 50px auto;
-  clear: left;
-  overflow: hidden;
+.page, .sidebar {
+  @include box-sizing(border-box);
 }
 
-#container2 {
-  clear: left;
-  float: left;
+.wrap {
   width: 100%;
+  max-width: $container-max-width;
+  margin: 20px auto;
   position: relative;
-  right: $right-column-width;
 }
 
-#container1 {
-  float: left;
-  width: 100%;
-  position: relative;
-  right: (100 - $right-column-width) / 2;
+.wrap:before, .wrap:after {
+  content: '';
+  display: table;
 }
 
-#col1, #col2, #col3 {
-  float: left;
-  position: relative;
-  left: 100 - (100 - $right-column-width) / 2;
+.wrap:after {
+  clear: both;
 }
 
-#col1, #col2 {
+.page, .page:before {
   width: (100 - $right-column-width) / 2;
 }
 
-#col3 {
-  width: $right-column-width;
-}
-
-.block {
+.page {
+  float: left;
   padding: $content-padding;
 }
 
+.page:before {
+  left: 0px;
+}
+
+.page:first-child + .page:before {
+  left: (100 - $right-column-width) / 2;
+}
+
+.sidebar {
+  float: left;
+  padding: $content-padding;
+}
+
+.sidebar:before {
+  left: 100 - $right-column-width;
+}
+
+.sidebar, .sidebar:before {
+  width: $right-column-width;
+}
+
+.page:before, .sidebar:before {
+  content: '';
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+@media only screen {}
+
 @media only screen and (max-width: 20em) {}
 
-@media only screen and (min-width: 20.063em) and (max-width: 60em) {
-  #container1, #container2, #container3 {
-    width: 100%;
-    right: 0px;
-  }
-  #col1, #col2, #col3 {
-    width: 100%;
-    left: 0px;
-  }
-}
+@media only screen and (min-width: 20.063em) and (max-width: 60em) {}
 
-@media only screen and (min-width: 60.063em) and (max-width: 110em) {
-  #container3 {
-    width: 90%;
-  }
-  #container2 {
-    right: 0px;
-  }
-  #container1 {
-    right: 50%;
-  }
-  #col1, #col2 {
-    width: 50%;
-  }
-  #col1, #col2,#col3 {
-    left: 50%;
-  }
-  #col3 {
-    width: 100%;
-    .block {
-      padding: 0px;
-      width: 50%;
-      & > * {
-        padding: $content-padding;
-      }
-    }
-    .block:nth-child(odd) {
-      float: left;
-    }
-    .block:nth-child(even) {
-      float: right;
-    }
-  }
-}
+@media only screen and (min-width: 60.063em) and (max-width: 110em) {}
 
 @media only screen and (min-width: 111em) {}
