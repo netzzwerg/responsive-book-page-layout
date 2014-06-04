@@ -10,18 +10,30 @@ body {
   text-align: center;
 }
 
-#container1, #container3 {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+::-webkit-scrollbar-thumb:vertical {
+  width: 10px;
+  background: #222222;
 }
 
-#container3 {
+::-webkit-scrollbar-thumb:horizontal {
+  height: 10px;
+  background: #222222;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #e1e1e1;
+}
+
+.page:before {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   background-color: #FFFFFF;
   color: #666666;
 }
 
-#col3 {
+.sidebar {
   color: #FFFFFF;
-  background-color: #000000;
+  background-color: #222222;
 }
 
 .block {
